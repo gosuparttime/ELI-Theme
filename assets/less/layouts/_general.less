@@ -1,0 +1,202 @@
+// Content wrapper
+.wrap {
+    padding: 1em 0;
+}
+img{
+    max-width: 100%;
+}
+
+// Fitter for desktops
+.zero-pad-sm{
+    padding: 0 15px;
+    @media (min-width: @screen-md-min) {
+        padding: 0;
+  }
+}
+// Main content area
+.main {
+  .make-sm-column(@main-sm-columns);
+  .sidebar-primary & {
+    .make-sm-column(@main-sm-columns - @sidebar-sm-columns);
+  }
+}
+// Footer Nav
+// -------------------------------
+ul.menu{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    li{
+        float: left;
+        padding: 0em .5em;
+        border-right: 1px solid;
+        a{
+            padding: .25em .6em;
+            display: block;
+            line-height: 1em;
+        }
+    }
+    li:first-child{
+        margin-left: -1.1em;
+    }
+    li:last-child{
+        margin-right: -1em;
+        border-right: none;
+    }
+}
+#inner-footer ul.menu{
+    padding-bottom: 1em;
+    li{
+        border-color: @blueMed;
+    }
+}
+
+// Utility Nav
+// -------------------------------
+#university .menu{
+    padding-top: 1em;
+}
+.faq-nav{
+    border-top: 2px solid @blueLight;
+    ul{
+        padding: 1em;
+        
+    }
+    li{
+        margin-bottom: .5em;
+    }
+}
+
+.in-block{display:inline-block}
+
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+
+// Space out pagination from surrounding content
+.pagination {
+  margin: @line-height-base 0;
+}
+
+.pagination ul {
+  // Allow for text-based alignment
+  display: inline-block;
+  // Reset default ul styles
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0;
+  // Visuals
+}
+.pagination ul > li {
+  display: inline; // Remove list-style and block-level defaults
+}
+.pagination ul > li > a,
+.pagination ul > li > span {
+  float: left; // Collapse white-space
+  padding: 4px 12px;
+  line-height: @line-height-base;
+  text-decoration: none;
+  background-color: @pagination-bg;
+  border: 1px solid @pagination-border;
+  border-left-width: 0;
+}
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  background-color: @pagination-active-bg;
+}
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  color: @grayLight;
+  cursor: default;
+}
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > a:focus {
+  color: @grayLight;
+  background-color: transparent;
+  cursor: default;
+}
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span {
+  border-left-width: 1px;
+  border-left-radius: 0px;
+}
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
+  border-right-radius: 0px;
+}
+
+
+// Alignment
+// --------------------------------------------------
+
+.pagination-centered {
+  text-align: center;
+}
+.pagination-right {
+  text-align: right;
+}
+
+
+// Sizing
+// --------------------------------------------------
+
+// Large
+.pagination-large {
+  ul > li > a,
+  ul > li > span {
+    padding: 1em;
+    font-size: @fontSizeLarge;
+  }
+  ul > li:first-child > a,
+  ul > li:first-child > span {
+    border-left-radius: 0px;
+  }
+  ul > li:last-child > a,
+  ul > li:last-child > span {
+    border-right-radius: 0px;
+  }
+}
+
+// Small and mini
+.pagination-mini,
+.pagination-small {
+  ul > li:first-child > a,
+  ul > li:first-child > span {
+    border-left-radius: 0px;
+  }
+  ul > li:last-child > a,
+  ul > li:last-child > span {
+    border-right-radius: 0px;
+  }
+}
+
+// Small
+.pagination-small {
+  ul > li > a,
+  ul > li > span {
+    padding: .5em;
+    font-size: @fontSizeSmall;
+  }
+}
+// Mini
+.pagination-mini {
+  ul > li > a,
+  ul > li > span {
+    padding: .33em .5em;
+    font-size: @fontSizeMini;
+  }
+}
+#translation{
+    margin-top: 10px;
+    @media (max-width: @screen-sm-max) {
+        margin: 10px 15px;
+  }
+}
+button.navbar-toggle{
+    text-align: left;
+    border: none;
+}

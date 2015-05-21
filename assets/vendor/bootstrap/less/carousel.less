@@ -1,0 +1,185 @@
+//
+// Carousel
+// --------------------------------------------------
+
+
+.carousel {
+  position: relative;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.carousel-inner {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-inner {
+
+  > .item {
+    display: none;
+    position: relative;
+    .transition(.6s ease-in-out left);
+
+    // Account for jankitude on images
+    > img,
+    > a > img {
+      display: block;
+      line-height: 1;
+    }
+  }
+
+  > .active,
+  > .next,
+  > .prev { display: block; }
+
+  > .active {
+    left: 0;
+  }
+
+  > .next,
+  > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  > .next {
+    left: 100%;
+  }
+  > .prev {
+    left: -100%;
+  }
+  > .next.left,
+  > .prev.right {
+    left: 0;
+  }
+
+  > .active.left {
+    left: -100%;
+  }
+  > .active.right {
+    left: 100%;
+  }
+
+}
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+  position: absolute;
+  top: 40%;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 30px;
+  color: @white;
+  text-align: center;
+  background: @grayDarker;
+  border: 3px solid @white;
+  border-radius: 23px;
+  opacity: .5;
+
+  // we can't have this transition here
+  // because webkit cancels the carousel
+  // animation if you trip this while
+  // in the middle of another animation
+  // ;_;
+  // .transition(opacity .2s linear);
+
+  // Reposition the right one
+  &.right {
+    left: auto;
+    right: 15px;
+  }
+
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    color: @white;
+    text-decoration: none;
+    .opacity(90);
+  }
+}
+
+// Carousel indicator pips
+// -----------------------------
+.carousel-indicators {
+  position: absolute;
+  bottom: 1.5em;
+  right: 1.5em;
+  z-index: 5;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+  padding: 0;
+  li {
+    display: block;
+    float: left;
+    width: 2em;
+    height: 2em;
+    margin-left: .5em;
+    text-align: center;
+    padding: .33em;
+    font-size: @fontSizeMini;
+    line-height: 1em;
+    color: @white;
+    background-color: @blueMed;
+    border-radius: 2px;
+    border: 2px solid @white;
+    .box-shadow(0 0 .5em rgba(0,0,0,.75));
+}
+  .active {
+    background-color: @orange;
+    .scale(1.25);
+    border: 2px solid @white;
+  }
+}
+
+// Caption for text below images
+// -----------------------------
+
+.carousel-caption {
+  position: absolute;
+  left: 1.5em;
+  bottom: 1.5em;
+  padding: 1em 1.5em 1.5em;
+  width: 27em;
+  background: @white;
+  background: fade(@white, 75%);
+}
+.carousel-caption h4,
+.carousel-caption p {
+  color: @grayDark;
+  line-height: @line-height-base;
+  font-weight: bold;
+}
+.carousel-caption h4 {
+  margin: 0 0 5px;
+}
+.carousel-caption p {
+  margin-bottom: 1em;
+}
+.carousel-caption a.btn-primary{
+    .btn-block;
+}
+// Carousel Fade?
+.carousel {
+  .item {
+    .transition(.7s ease-in-out opacity);
+    left: 0 !important;
+  }
+  .next.left, .prev.right {
+    opacity: 1;
+    z-index: 1;
+  }
+  .active.left, .active.right {
+    opacity: 0;
+    z-index: 2;
+  }
+}

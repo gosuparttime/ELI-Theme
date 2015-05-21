@@ -1,0 +1,35 @@
+.banner { }
+.hero-unit {
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 1em;
+  border: 1px solid @grayLight;
+  border-bottom: none;
+  background-color: @jumbotron-bg;
+  position: relative;
+  h2 {
+    margin: 0;
+    border: none;
+    line-height: @line-height-base;
+    padding: 0;
+    color: @orangeDark;
+    &.page-header{
+        padding: .5em 1em;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: rgba(255,255,255, .75);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @media (max-width: @screen-xs-max) {
+            background: lighten(@blueLight, 25%);
+            position: relative;
+            padding: 8px 15px;
+            font-size: @font-size-h3;
+        }
+    }
+  }  
+}
+

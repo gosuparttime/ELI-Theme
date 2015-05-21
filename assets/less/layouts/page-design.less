@@ -1,0 +1,134 @@
+//
+// Page Design
+// --------------------------------------------------
+
+.white{
+    background-color: @white;
+    padding: 1.5em 0em 0em 0em;
+    border-top: 4px solid lighten(@orange, 10%);
+    border-bottom: 4px solid lighten(@orange, 10%);
+}
+#inner-footer, #colophon, #university{
+    font-size: @fontSizeSmall;
+}
+#colophon, #university{
+    color: @white;
+    font-weight: bold;
+    a{
+        color: @white;
+    }
+}
+#inner-footer {
+    .pad-two-t;
+    border-top: 4px solid @blueLight;
+    position: relative;
+    #footer-information{
+        padding-top: 1em;
+    }
+    nav{
+        padding-top: 1em;
+    }
+}
+.seal{
+    
+    img{
+        vertical-align: bottom;
+    }
+}
+a:hover i{
+    text-decoration: none;
+}
+a:link i{
+    margin-right: .25em;
+}
+.module, .widget{
+    margin-bottom: 3em;
+}
+.off-screen{
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    left: -10000px;
+    top: auto;
+    position: absolute;
+}
+.acc-logo{
+    height: 9em;
+    max-height: 9em;
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    background-color: @white;
+    img{
+        position: absolute;
+        bottom: 0;
+    }
+}
+.acc-credit{
+    text-align: middle;
+    padding-top: .25em;
+}
+.alignright{
+    float: right;
+}
+.twenty{
+    width: 17%;
+    float: left;
+    margin-right: 3%;
+}
+.form-item{
+    padding: .25em;
+}
+.select-menu option{
+    padding: .25em;
+}
+
+span.wpcf7-list-item {
+    margin-left: 0 !important;
+    padding-bottom: .5em !important;
+    display: block;
+}
+span.wpcf7-list-item-label{
+    color: @gray;
+}
+div.wpcf7-mail-sent-ok{
+    .alert-success;
+}
+div.wpcf7-validation-errors, span.wpcf7-not-valid-tip{
+    .alert-danger;
+}
+span.wpcf7-not-valid-tip{
+    padding: .75em 1em;
+    top: 0;
+    left: 0 ;
+    min-width: 10em;
+}
+// MS Translate functions
+#MSTWHeaderText{
+    display: none;
+}
+
+ul.gce-list{
+    margin: 0;
+	padding: 0;
+	list-style-type:none;
+    li{
+        margin-bottom: 1em;
+    }
+}
+#gallery-nav{
+    padding: 0;
+    margin: 0;
+}
+.small-mar{
+    margin-bottom: .5em;
+}
+img.alignright.size-medium{
+    .thumbnail;
+    .mar-one-l;
+    .mar-one-b;
+}
+table caption{
+    text-indent: -9999px;
+    line-height: 0px;
+}
